@@ -1,0 +1,251 @@
+/********************************************
+ * Made By: Adrienne Bienapfl 2017          *
+ * ALL RIGHTS RESERVED                      *
+ * Purpose: Scripting For Baking Site       *
+ * Name:    adrienneFunctions.js            *
+ * Created: August 23rd, 2017               *
+ *  Last Edited: 8/25/17                    *
+ ********************************************/
+
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+ol { 
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+/* end reset browser styles */
+
+
+/*Styles above here are to avoid Browser Interference -- basically normalize.css within this file */
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+}
+    
+/* Add a gray background color and some padding to the footer */
+footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+}   
+.carousel-inner img {
+      width: 100%; /* Set width to 100% to avoid ugly gutters on left and right */
+      margin: auto; /*Shorthand use for style */
+      min-height: 200px;
+	  max-height: 700px; /*Fixed the images being super large and dominating the page. Help courtesy of http://stackoverflow.com/questions/14590792/twitter-bootstrap-carousel-size */
+}
+
+/*Styles for sleek footer */
+footer {
+	background-image:-webkit-linear-gradient(top, #31353A, #2F3337);
+	background-image:-moz-linear-gradient(top, #31353A, #2F3337);
+	background-image:linear-gradient(top, #31353A, #2F3337);
+}
+
+/*Styles to specifically target footer text */
+footer p {
+	color: #FFFFFF;
+	font-family: 'Kaushan Script', cursive;
+	font-size: 2em;
+	text-align: left;
+}
+
+h1 {
+	text-align: center;
+}
+/*Cool hover fade effect on image links -- later use*/
+.img-responsive {
+	opacity: 0.8;
+}
+
+.img-responsive:hover {
+	opacity: 1;
+}
+
+/*Style some supplemental text to carousel, inspired by W3schools */
+.carousel-caption {
+	font-family: 'Josefin Slab', Arial, serif;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+/*Styles to target certain text elements */
+.doclass {
+	font-family: 'Kaushan Script', Baskerville, cursive;
+	font-size: 3em;
+}
+/*Hotfix to align certain texts in center */
+.center {
+	text-align: center;
+}
+/*Navbar styles */
+.navbar-nav li a {
+  color: #FFFFFF;
+  font-family: 'Kaushan Script', Baskerville, cursive;
+  font-weight: bold;
+}
+
+/*.navbar-toggle:after { Experimenting with menu text denotation
+    content: "Menu";
+    color: #FFFFFF;
+}
+/*Styles for linked images text --later use*/
+.launchlinks {
+	font-family: 'Kaushan Script', Baskerville, cursive;
+	font-weight: bold;
+	font-size: 2em;
+}
+/*Styles for main page content, courtesy of Mr. Hawke and the W3Schools documentation */
+.jumbotron {
+	font-family: 'Josefin Slab', Arial, serif;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.spacer {
+    margin-top: 50px;
+}
+
+.feature {
+    margin-bottom: 30px;
+}
+
+.recipehead {
+	font-size: 2em;
+	font-weight: bold;
+	font-family: 'Josefin Slab', Arial, serif;
+}
+
+.recipedescription {
+	font-weight: normal;
+	font-size: 2em;
+	font-family: 'Amatic SC', Times New Roman, cursive;
+}
+
+.contact-form {
+    text-align: center;
+    float: right;
+}
+
+/*Styles for FAQ acc */
+button.accordion {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+	background-color: #DDD;
+}
+
+/* Accordion answers hidden by default */
+div.panel {
+	padding: 0 18px;
+	background-color: white;
+	display: none;
+}
+
+
+button.accordion:after {
+	content: '\02795'; /* Unicode  for plus */
+	font-size: 13px;
+	color: #777;
+	float: right;
+	margin-left: 5px;
+}
+
+button.accordion.active:after {
+	content: "\2796"; /* Unicode for minus */
+}
+
+/* Contact Form Styles */
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.loginError {
+	font-weight: bold;
+	color: red;
+}
+
+
+
+
+#required {
+    color:red;
+    float: right;
+}
+
+
+/* MEDIA QUERY SECTION -------------------------------------------------------------------------------------------*/
+/* Hide the carousel text when the screen is less than 1195 pixels wide */
+@media (max-width: 1195px) {
+
+	.carousel-caption {
+		display: none;
+	}
+
+	#socialcanvas {
+		display: none;
+	}
+}

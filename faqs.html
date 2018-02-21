@@ -1,0 +1,135 @@
+<!--
+/***************************************************
+ * Made By: Adrienne Bienapfl 2017                 *
+ * ALL RIGHTS RESERVED                             *
+ * Purpose: MainPage For Baking Site               *
+ * Name:    index.html                             *
+ * Created: August 29th, 2017                      *
+ * Last Edited: 8/29/17                            *
+ * Images sourced/edited from https://pixabay.com/ *
+ * and https://www.pexels.com/                     *
+ ***************************************************/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Frequently Asked Questions</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Browser Tab Icon -->
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16"/>
+    <!-- Bootstrap Imports CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Main Stylesheet Link -->
+    <link href="css/main.css" rel="stylesheet">
+    <!-- Imported Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <!-- Javascript Stuff -->
+    <script src="scripts/adrienneFunctions.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <!-- Mobile Responsive Nav -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><span class="fa fa-birthday-cake"></span></a> <!-- Used a glyphicon as a tiny logo that links to our homepage -->
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="tempcalculator.html">Temperature Calculator</a></li>
+                <li><a href="faqs.html">FAQS</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active"> <!-- First initial item for the carousel -->
+            <img src="images/baking1.jpg" alt="hands kneading dough">
+            <div class="carousel-caption">
+                <h3>"Baking is about multi-tasking. If you are organized and prepared, that's half the battle."</h3>
+                <p>-Johnny Iuzzini</p>
+            </div>
+        </div>
+
+        <div class="item"> <!-- Second element of the carousel -->
+            <img src="images/baking2.jpeg" alt="sifting powdered sugar">
+            <div class="carousel-caption">
+                <h3>Get Started Today</h3>
+                <p>Contact us for details</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <!-- Carousel control image -->
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div><br>
+
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Frequently Asked Questions</h1> <!-- FAQS done in an accordion drop-down style menu to collapse and expand based on user input -->
+
+        <p class="center">Looking for an answer? Check here first!</p><br>
+
+        <button class="accordion">Is a metal or glass pan better for baking?</button>
+        <div class="panel">
+            <p>That depends! Metal differs from glass, and the heat distribution in a glass pan is very uniform, but metal conducts heat better. You will
+            want to adjust cooking time and temps based on the pan you are using.</p>
+        </div>
+
+        <button class="accordion">Why does my cake deflate when it comes out of the oven?</button>
+        <div class="panel">
+            <p>A cake that puffs up as it bakes and deflates as it cools has usually had air beaten into the batter too quickly or vigorously.</p>
+        </div>
+
+        <button class="accordion">Is chocolate that has turned white still safe to use?</button>
+        <div class="panel">
+            <p>Don't be worried about that gray–white cloudy covering on your chocolate. It is called "bloom" and is made up of fats and sugars blooming out
+                after being stored for a while at a somewhat warm temperature.</p>
+        </div>
+
+
+    </div>
+
+</div>
+<br>
+
+<script src="scripts/adrienneFunctions.js"></script>
+<footer class="container-fluid text-center"> <!-- Footer items are centered and footer sticks to bottom of page -->
+    <p class="center"><span class="glyphicon glyphicon-copyright-mark"></span>&nbsp;Adrienne Bienapfl 2017</p>
+    <p class="center"><span id="footerDate">DATE</span></p> <!-- Current Date always displays in footer -->
+</footer>
+</body>
+</html>

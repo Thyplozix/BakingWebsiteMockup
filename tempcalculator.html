@@ -1,0 +1,119 @@
+<!-- 
+/***************************************************
+ * Made By: Adrienne Bienapfl 2017                 *
+ * ALL RIGHTS RESERVED                             *
+ * Purpose: Temperature Calculator For Baking Site *
+ * Name:    tempcalculator.html                    *
+ * Created: August 23rd, 2017                      *
+ * Last Edited: 8/25/17                            *
+ * Images sourced/edited from https://pixabay.com/ *
+ * and https://www.pexels.com/                     *  
+ ***************************************************/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Temperature Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Browser Tab Icon -->
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16"/>
+  <!-- Bootstrap Imports CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Main Stylesheet Link -->
+  <link href="css/main.css" rel="stylesheet">
+  <!-- Imported Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <!-- Javascript Stuff -->
+  <script src="scripts/adrienneFunctions.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html"><span class="fa fa-birthday-cake"></span></a> <!-- Used a glyphicon as a logo that links to our homepage -->
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav"> 
+        <li class="active"><a href="index.html">Home</a></li> 
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="tempcalculator.html">Temperature Calculator</a></li>
+          <li><a href="faqs.html">FAQS</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active"> <!-- First initial item for the carousel -->
+        <img src="images/baking1.jpg" alt="hands kneading dough">
+        <div class="carousel-caption">
+            <h3>"Baking is about multi-tasking. If you are organized and prepared, that's half the battle."</h3>
+            <p>-Johnny Iuzzini</p>
+        </div>      
+      </div>
+
+      <div class="item"> <!-- Second element of the carousel -->
+        <img src="images/baking2.jpeg" alt="sifting powdered sugar">
+        <div class="carousel-caption">
+          <h3>Get Started Today</h3>
+          <p>Contact us for details</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <!-- Carousel control image -->
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+  
+<div class="container text-center">    
+  <div class="row">
+     <header class="jumbotron spacer"> 
+            <h1>Need a temperature conversion? No problem!</h1>
+            <p>Sometimes ovens and recipes are unexpected and strange. Temperatures given can vary, so let us make the math easy on you. Here you will find a means of converting Fahrenheit to Celsius for conventional ovens. </p><br>
+
+			<p>
+				<label>Enter Fahrenheit Temperature</label>
+				<input id="inputFahrenheit" oninput="TempConversion(this.value)">
+			</p>
+         <p><b>Celsius: <span id="outputCelsius"></span></b></p></header><br>
+		</div>
+</div>
+<!--</header> -->
+	  
+<footer class="container-fluid text-center">
+    <p class="center"><span class="glyphicon glyphicon-copyright-mark"></span>&nbsp;Adrienne Bienapfl 2017</p>
+    <p class="center"><span id="footerDate">DATE</span></p>
+</footer>
+</body>
+</html>
